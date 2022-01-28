@@ -33,9 +33,10 @@ jobs:
         uses: k6io/action@v0.1
         with:
          filename: first.js  
-      - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
-        with:
-          name: code-coverage-report
-          path: output/first/new2.html
+      - name: Upload and download single file
 
+      - name: Download File
+      - uses: actions/download-artifact@v1
+        with:
+          name: first
+      - run: cat new2.html
