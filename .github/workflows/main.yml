@@ -33,5 +33,17 @@ jobs:
         uses: k6io/action@HEAD
         with:
          filename: first.js  
+      
+      
+      - uses: actions/checkout@v2
+
+      - run: mkdir -p path/to/artifact
+
+      - run: echo hello > path/to/artifact/new2.html
+
+      - uses: actions/upload-artifact@v2
+        with:
+         name: my-artifact
+         path: path/to/artifact/new2.html
 
 
