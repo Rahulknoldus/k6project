@@ -33,10 +33,5 @@ jobs:
         uses: k6io/action@v0.1
         with:
          filename: first.js  
-      - name: Upload and download single file
 
-      - name: Download File
-      - uses: actions/download-artifact@v1
-        with:
-          name: first
-      - run: cat new2.html
+
