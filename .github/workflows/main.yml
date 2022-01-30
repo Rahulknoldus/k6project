@@ -54,5 +54,5 @@ jobs:
          path: path/to/artifact
     
       - name: Display structure of downloaded files
-        run: ls -R
+        run: new2.html
         working-directory: path/to/artifact
