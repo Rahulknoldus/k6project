@@ -27,7 +27,7 @@ jobs:
 
    
       - name: Run local k6 test
-        uses: k6io/action@0.1
+        uses: k6io/action@v0.1
         with:
          filename: first.js  
       
