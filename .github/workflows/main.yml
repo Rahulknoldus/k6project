@@ -51,5 +51,5 @@ jobs:
          path: path/to/artifact
     
       - name: Display structure of downloaded files
-        run: new2.html
+        run: chrome new2.html
         working-directory: path/to/artifact
