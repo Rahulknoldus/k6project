@@ -30,7 +30,7 @@ jobs:
         run: echo Hello, world!
        
       - name: Run local k6 test
-        uses: k6io/action@v0.1
+        uses: k6io/action@HEAD
         with:
          filename: first.js  
 
