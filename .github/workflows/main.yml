@@ -32,11 +32,12 @@ jobs:
         with:
          filename: first.js  
       
-    
+      - run: mkdir -p path/to/artifact
 
-     
-
-      - uses: actions/download-artifact@v2
+      - run: echo hello > path/to/artifact/new2.html
+  
+      - name: Upload html report for job 1
+        uses: actions/upload-artifact@v2
         with:
          name: my-artifact
          path: path/to/artifact
@@ -47,10 +48,7 @@ jobs:
     runs-on: ubuntu-latest
      
     steps:
-      - run: mkdir -p path/to/artifact
-
-      - run: echo > path/to/artifact/new2.html
-      
+     
       - name: Download html report for job 1
         uses: actions/download-artifact@v2
         with:
