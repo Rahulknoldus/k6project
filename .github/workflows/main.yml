@@ -50,6 +50,4 @@ jobs:
          name: my-artifact
          path: path/to/artifact
     
-      - name: Display structure of downloaded files
-        run: open new2.html
-        working-directory: path/to/artifact
+    
