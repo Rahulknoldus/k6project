@@ -16,12 +16,13 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  job1:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
@@ -31,9 +32,6 @@ jobs:
         with:
          filename: first.js  
       
-      
-      - uses: actions/checkout@v2
-
       - run: mkdir -p path/to/artifact
 
       - run: echo hello > path/to/artifact/new2.html
@@ -42,8 +40,6 @@ jobs:
         with:
          name: my-artifact
          path: path/to/artifact/new2.html
-
-      - uses: actions/checkout@v2
 
       - uses: actions/download-artifact@v2
         with:
