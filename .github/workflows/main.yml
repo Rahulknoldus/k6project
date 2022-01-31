@@ -74,8 +74,4 @@ jobs:
           name: my-artifact
           path: path/to/artifact/new2.html
 
-      - name: Print the final result
-        shell: bash
-        run: |
-          value=`cat path/to/artifact/new2.html`
-          echo The result is $value
+     
