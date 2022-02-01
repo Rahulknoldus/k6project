@@ -36,7 +36,7 @@ jobs:
 
       - run: mkdir -p report
 
-      - run:  report/summary.html
+      - run: echo report/summary.html
 
       - uses: actions/upload-artifact@v2
         with:
