@@ -32,12 +32,12 @@ jobs:
         with:
          filename: first.js  
   
-      - name: Upload html report for job 1
+      - name: Storing report
         uses: actions/upload-artifact@v2
         with:
-         name: new2
-         path: new2.html
-    
+          name: summary
+          path: new2.html
+          retention-days: 2
   
 
 
