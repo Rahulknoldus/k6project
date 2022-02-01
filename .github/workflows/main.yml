@@ -35,7 +35,7 @@ jobs:
       - name: Storing report
         uses: actions/upload-artifact@v2
         with:
-          name: summary
+          name: new2
           path: new2.html
           retention-days: 2
   
