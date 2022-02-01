@@ -10,9 +10,6 @@ on:
   pull_request:
     branches: [ main ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -32,19 +29,14 @@ jobs:
         with:
          filename: first.js  
          
-      - uses: actions/checkout@v2
-
-      - run: mkdir -p report
-
-      - run: echo report/summary.html
-
+      
       - uses: actions/upload-artifact@v2
         with:
           name: summary.html
           path: report/summary.html  
       - uses: actions/upload-artifact@v2
         with:
-          name: summary.html
+          name: summary
           path: summary.html   
   
       - name: Storing report
