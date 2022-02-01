@@ -12,8 +12,6 @@ export let options = {
 export function handleSummary(data) {
   return {
     "new2.html": htmlReport(data),
-     stdout: textSummary(data, { indent: " ", enableColors: true }),
-
   };
 }
 
