@@ -9,11 +9,6 @@ export let options = {
   duration: '10s'
 };*/
 
-export function handleSummary(data) {
-  return {
-    "new2.html": htmlReport(data),
-  };
-}
 
 // Load test setup
 export let options = {
@@ -36,6 +31,12 @@ export default function () {
     'body contains text match': (r) => r.body.includes('Collection of simple web-pages suitable for load testing.'),
     
   });
+  
+  export function handleSummary(data) {
+    return {
+      "summary.html": htmlReport(data),
+    };
+  }
 
   
 }
