@@ -38,25 +38,7 @@ jobs:
          name: new2
          path: new2.html
     
-  job_2:
-    name: get the html report
-    needs: job_1
-    runs-on: ubuntu-latest
-     
-    steps:
-     
-      - name: Download html report for job 1
-        uses: actions/download-artifact@v2
-        with:
-          name: new2
-          path: new2.html
-
-    
-      - name: Upload math result for job 2
-        uses: actions/upload-artifact@v2
-        with:
-          name: new
-          path: new2.html
+  
 
 
   
