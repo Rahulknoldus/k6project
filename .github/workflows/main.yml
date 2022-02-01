@@ -31,16 +31,12 @@ jobs:
         uses: k6io/action@v0.1
         with:
          filename: first.js  
-      
-      - run: mkdir -p path/to/artifact
-
-      - run: echo hello > path/to/artifact/new2.html
   
       - name: Upload html report for job 1
         uses: actions/upload-artifact@v2
         with:
-         name: my-artifact
-         path: path/to/artifact
+         name: new2
+         path: new2.html
     
   job_2:
     name: get the html report
@@ -52,26 +48,16 @@ jobs:
       - name: Download html report for job 1
         uses: actions/download-artifact@v2
         with:
-          name: my-artifact
-          path: path/to/artifact/new2.html
+          name: new2
+          path: new2.html
 
     
       - name: Upload math result for job 2
         uses: actions/upload-artifact@v2
         with:
-          name: my-artifact
-          path: path/to/artifact/new2.html
+          name: new
+          path: new2.html
 
 
-  job_3:
-    name: Display results
-    needs: job_2
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download html report for job 2
-        uses: actions/download-artifact@v2
-        with:
-          name: my-artifact
-          path: path/to/artifact/new2.html
-
+  
      
