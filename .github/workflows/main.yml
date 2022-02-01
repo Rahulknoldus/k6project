@@ -29,13 +29,13 @@ jobs:
         with:
          filename: first.js  
          
-      
+      - name: genrate report    
       - uses: actions/checkout@v2
 
       - run: mkdir -p report
 
       - run: echo hello > report/summary.html
-
+      - name: genrate report    
       - uses: actions/upload-artifact@v2
         with:
           name: summary
