@@ -36,12 +36,16 @@ jobs:
 
       - run: mkdir -p report
 
-      - run: echo hello > report/summary.html
+      - run:  report/summary.html
 
       - uses: actions/upload-artifact@v2
         with:
           name: summary.html
-          path: report/summary.html    
+          path: report/summary.html  
+      - uses: actions/upload-artifact@v2
+        with:
+          name: summary.html
+          path: summary.html   
   
       - name: Storing report
         uses: actions/upload-artifact@v2
