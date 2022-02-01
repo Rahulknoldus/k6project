@@ -8,7 +8,11 @@ export let options = {
   vus: 10,
   duration: '10s'
 };*/
-
+export function handleSummary(data) {
+    return {
+      "summary.html": htmlReport(data),
+    };
+  }
 
 // Load test setup
 export let options = {
@@ -32,11 +36,7 @@ export default function () {
     
   });
   
-  export function handleSummary(data) {
-    return {
-      "summary.html": htmlReport(data),
-    };
-  }
+  
 
   
 }
