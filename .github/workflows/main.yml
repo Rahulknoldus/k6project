@@ -30,21 +30,22 @@ jobs:
          filename: first.js  
          
       
-      - uses: actions/upload-artifact@v2
-        with:
-          name: summary.html
-          path: report/summary.html  
+      - uses: actions/checkout@v2
+
+      - run: mkdir -p report
+
+      - run: echo hello > report/summary.html
+
       - uses: actions/upload-artifact@v2
         with:
           name: summary
-          path: summary.html   
-  
-      - name: Storing report
-        uses: actions/upload-artifact@v2
+          path: report/summary.html
+      - name: 'Upload Artifact'
+      - uses: actions/upload-artifact@v2
         with:
-          name: summary
-          path: summary.html
-          retention-days: 2
+           name: report
+           path: summary.html
+           retention-days: 2
   
 
 
