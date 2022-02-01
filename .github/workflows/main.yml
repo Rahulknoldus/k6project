@@ -40,14 +40,14 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: summary
+          name: summary.html
           path: report/summary.html    
   
       - name: Storing report
         uses: actions/upload-artifact@v2
         with:
           name: summary
-          path: summary.html
+          path: report/summary.html
           retention-days: 2
   
 
