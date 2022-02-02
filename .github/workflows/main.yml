@@ -37,7 +37,7 @@ jobs:
       - name: Upload html report for job 1
         uses: actions/upload-artifact@v2
         with:
-         name: summary.html
+         name: summary
          path: summary.html
          retention-days: 2
     
@@ -51,7 +51,7 @@ jobs:
       - name: Download html report for job 1
         uses: actions/download-artifact@v2
         with:
-          name: summary.html
+          name: summary
           path:  summary.html
 
     
