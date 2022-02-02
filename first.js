@@ -12,7 +12,7 @@ export let options = {
 export function handleSummary(data) {
     return {
       "summary.html": htmlReport(data),
-      'stdout': textSummary(data, { indent: ' ', enableColors: true }), // Show the text summary to stdout...
+      //'stdout': textSummary(data, { indent: ' ', enableColors: true }), // Show the text summary to stdout...
     };
   }
 
