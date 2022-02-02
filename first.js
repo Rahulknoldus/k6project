@@ -3,11 +3,11 @@ import http from 'k6/http';
 import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 
-/*Test setup
+Test setup
 export let options = {
-  vus: 10,
+  vus: 5,
   duration: '10s'
-};*/
+};
 
 export function handleSummary(data) {
     return {
@@ -15,7 +15,7 @@ export function handleSummary(data) {
       //'stdout': textSummary(data, { indent: ' ', enableColors: true }), // Show the text summary to stdout...
     };
   }
-
+/*
 // Load test setup
 export let options = {
   thresholds: {
@@ -26,7 +26,7 @@ export let options = {
       { duration: '10s', target: 5 }, // stay at 100 users for 10 minutes.
       { duration: '5s', target: 0 }, // ramp-down to 0 users.
   ]
-};
+};*/
 
 
 export default function () {
