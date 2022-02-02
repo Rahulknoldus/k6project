@@ -5,7 +5,7 @@ import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporte
 
 Test setup
 export let options = {
-  vus: 5,
+  vus: 10,
   duration: '10s'
 };
 
