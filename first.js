@@ -10,7 +10,7 @@ export let options = {
 };
 
 //Load test setup
-export let options = {
+/*export let options = {
   thresholds: {
     "http_req_duration": ["p(95)<1000"]
    },
@@ -19,7 +19,7 @@ export let options = {
       { duration: '10s', target: 5 }, // stay at 5 users for 10 seconds.
       { duration: '5s', target: 0 }, // ramp-down to 0 users.
   ]
-};
+};*/
 
 
 export default function () {
