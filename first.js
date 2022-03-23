@@ -16,8 +16,8 @@ export let options = {
     "http_req_duration": ["p(95)<1000"]
    },
   stages: [
-      { duration: '5s', target: 5 }, // simulate ramp-up of traffic from 1 to 100 users over 5 minutes.
-      { duration: '10s', target: 5 }, // stay at 100 users for 10 minutes.
+      { duration: '5s', target: 5 }, // simulate ramp-up of traffic from 1 to 100 users over 5 seconds.
+      { duration: '10s', target: 5 }, // stay at 5 users for 10 seconds.
       { duration: '5s', target: 0 }, // ramp-down to 0 users.
   ]
 };*/
