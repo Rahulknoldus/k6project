@@ -9,17 +9,7 @@ export let options = {
   duration: '10s'
 };
 
-//Load test setup
-/*export let options = {
-  thresholds: {
-    "http_req_duration": ["p(95)<1000"]
-   },
-  stages: [
-      { duration: '5s', target: 5 }, // simulate ramp-up of traffic from 1 to 100 users over 5 seconds.
-      { duration: '10s', target: 5 }, // stay at 5 users for 10 seconds.
-      { duration: '5s', target: 0 }, // ramp-down to 0 users.
-  ]
-};*/
+
 
 
 export default function () {
